@@ -9,10 +9,10 @@ import java.util.Set;
 @Entity
 @DiscriminatorValue("GaraDiAtletica")
 public class GaraDiAtletica extends Evento {
-    @OneToMany
+    @ManyToMany
     @JoinColumn(name = "gara_id")
     private Set<Persona> atleti;
-    @OneToOne
+    @OneToMany
     private Persona atletaVincente;
 
 
